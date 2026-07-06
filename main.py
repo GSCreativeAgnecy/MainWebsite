@@ -14,6 +14,7 @@ class ContactForm(BaseModel):
     name: str
     email: str
     company: str = ""
+    budget_currency: str = "USD"
     budget: str = ""
     message: str
 
@@ -67,8 +68,8 @@ async def health():
 @app.post("/contact")
 async def contact_submit(form: ContactForm):
     logger.info(
-        "Contact form submission: name=%s, email=%s, company=%s, budget=%s",
-        form.name, form.email, form.company, form.budget,
+        "Contact form submission: name=%s, email=%s, company=%s, budget=%s %s",
+        form.name, form.email, form.company, form.budget_currency, form.budget,
     )
     # In production: send email notification to hello@gscreativeagency.com
     return JSONResponse({"ok": True})
