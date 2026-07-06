@@ -59,6 +59,11 @@ async def contact(request: Request):
     return templates.TemplateResponse(request, "contact.html", _context("contact"))
 
 
+@app.get("/health")
+async def health():
+    return JSONResponse({"status": "ok"})
+
+
 @app.post("/contact")
 async def contact_submit(form: ContactForm):
     logger.info(
