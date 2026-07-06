@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="relative pt-32 pb-20 bg-gray-900/50 overflow-hidden">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+            <span class="text-brand-400 text-sm font-semibold tracking-widest uppercase">Portfolio</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-6">
+                Our <span class="gradient-text">Work</span>
+            </h1>
+            <p class="text-lg text-gray-400 leading-relaxed">
+                A selection of projects we're proud to have been part of. Each one represents 
+                a partnership built on trust, creativity, and results.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Grid -->
+<section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Filter Tags -->
+        <div class="flex flex-wrap gap-3 mb-12 scroll-animate opacity-0">
+            <button class="px-4 py-2 bg-brand-500/10 text-brand-400 border border-brand-500/20 rounded-full text-sm font-medium hover:bg-brand-500/20 transition-colors">All</button>
+            <button class="px-4 py-2 bg-gray-800 text-gray-300 border border-gray-700 rounded-full text-sm font-medium hover:bg-gray-700 transition-colors">Web Design</button>
+            <button class="px-4 py-2 bg-gray-800 text-gray-300 border border-gray-700 rounded-full text-sm font-medium hover:bg-gray-700 transition-colors">Branding</button>
+            <button class="px-4 py-2 bg-gray-800 text-gray-300 border border-gray-700 rounded-full text-sm font-medium hover:bg-gray-700 transition-colors">Mobile Apps</button>
+            <button class="px-4 py-2 bg-gray-800 text-gray-300 border border-gray-700 rounded-full text-sm font-medium hover:bg-gray-700 transition-colors">Strategy</button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Project 1 -->
+            <div class="group relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-900/50 scroll-animate opacity-0">
+                <div class="aspect-[4/3] bg-gradient-to-br from-brand-900/30 to-gray-900 flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <div class="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-brand-400 font-bold text-xl">RW</span>
+                        </div>
+                        <h3 class="text-white font-semibold">Rebel Wireless</h3>
+                        <p class="text-gray-500 text-sm mt-1">Web App</p>
+                    </div>
+                </div>
+                <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h3 class="text-white font-bold text-lg">Rebel Wireless</h3>
+                    <p class="text-gray-300 text-sm mt-1">ISP customer portal with real-time account management</p>
+                    <span class="inline-block mt-3 text-brand-400 text-xs font-medium">Web Development</span>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="group relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-900/50 scroll-animate opacity-0 animation-delay-100">
+                <div class="aspect-[4/3] bg-gradient-to-br from-brand-600/30 to-gray-900 flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <div class="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-brand-400 font-bold text-xl">BR</span>
+                        </div>
+                        <h3 class="text-white font-semibold">Brownies</h3>
+                        <p class="text-gray-500 text-sm mt-1">iOS, Android, Web</p>
+                    </div>
+                </div>
+                <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h3 class="text-white font-bold text-lg">Brownies</h3>
+                    <p class="text-gray-300 text-sm mt-1">Dating app built for the Indian market</p>
+                    <span class="inline-block mt-3 text-brand-400 text-xs font-medium">Full-Stack Development</span>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="group relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-900/50 scroll-animate opacity-0 animation-delay-200">
+                <div class="aspect-[4/3] bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                    <div class="text-center p-8">
+                        <div class="w-16 h-16 bg-brand-500/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <span class="text-brand-400 font-bold text-xl">FS</span>
+                        </div>
+                        <h3 class="text-white font-semibold">Front Seat Holdings</h3>
+                        <p class="text-gray-500 text-sm mt-1">Brand Identity</p>
+                    </div>
+                </div>
+                <div class="absolute inset-0 portfolio-overlay opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                    <h3 class="text-white font-bold text-lg">Front Seat Holdings</h3>
+                    <p class="text-gray-300 text-sm mt-1">Holding company brand identity and web presence</p>
+                    <span class="inline-block mt-3 text-brand-400 text-xs font-medium">Brand Identity</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Coming Soon Message -->
+        <div class="mt-16 text-center p-12 rounded-2xl border border-dashed border-gray-700 bg-gray-900/30 scroll-animate opacity-0">
+            <svg class="w-12 h-12 text-gray-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+            </svg>
+            <h3 class="text-xl font-bold text-white mb-2">More Projects Coming Soon</h3>
+            <p class="text-gray-400 text-sm max-w-md mx-auto">
+                We're always working on something new. Check back soon for our latest work.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-gray-900/50 border-y border-gray-800">
+    <div class="max-w-3xl mx-auto text-center px-4 scroll-animate opacity-0">
+        <h2 class="text-3xl font-bold text-white mb-4">Want to Be Our Next Project?</h2>
+        <p class="text-gray-400 text-lg mb-8">Let's build something great together.</p>
+        <a href="/contact" class="inline-flex items-center px-8 py-3.5 bg-brand-500 hover:bg-brand-400 text-gray-900 font-semibold rounded-lg transition-all hover-lift">
+            Start a Project
+            <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+            </svg>
+        </a>
+    </div>
+</section>
+
+{% endblock %}

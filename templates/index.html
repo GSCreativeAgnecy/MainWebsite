@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center bg-grid overflow-hidden">
+    <!-- Ambient gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950"></div>
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-500/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40">
+        <div class="max-w-3xl">
+            <div class="animate-fade-in">
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-brand-500/10 text-brand-400 border border-brand-500/20 mb-6">
+                    Digital Creative Agency
+                </span>
+            </div>
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white leading-[1.1] tracking-tight animate-fade-in-up">
+                We Build
+                <span class="gradient-text">Brands</span>
+                <br class="hidden sm:block">
+                That Matter
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-gray-400 max-w-2xl leading-relaxed animate-fade-in-up animation-delay-100">
+                GS Creative Agency partners with founders and companies to craft bold digital experiences — 
+                from brand identity and web design to full-stack development and growth strategy.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
+                <a href="/contact" class="inline-flex items-center justify-center px-8 py-3.5 bg-brand-500 hover:bg-brand-400 text-gray-900 font-semibold rounded-lg transition-all hover-lift text-center">
+                    Start a Project
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <a href="/portfolio" class="inline-flex items-center justify-center px-8 py-3.5 border border-gray-700 hover:border-gray-500 text-gray-300 hover:text-white font-medium rounded-lg transition-all text-center">
+                    View Our Work
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="relative py-20 bg-gray-900/50 border-y border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center scroll-animate opacity-0">
+                <div class="text-3xl sm:text-4xl font-bold text-white">50+</div>
+                <div class="text-sm text-gray-400 mt-1">Projects Delivered</div>
+            </div>
+            <div class="text-center scroll-animate opacity-0 animation-delay-100">
+                <div class="text-3xl sm:text-4xl font-bold text-white">30+</div>
+                <div class="text-sm text-gray-400 mt-1">Happy Clients</div>
+            </div>
+            <div class="text-center scroll-animate opacity-0 animation-delay-200">
+                <div class="text-3xl sm:text-4xl font-bold text-white">4+</div>
+                <div class="text-sm text-gray-400 mt-1">Years Building</div>
+            </div>
+            <div class="text-center scroll-animate opacity-0 animation-delay-300">
+                <div class="text-3xl sm:text-4xl font-bold text-white">100%</div>
+                <div class="text-sm text-gray-400 mt-1">Client Retention</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Preview -->
+<section class="relative py-24 lg:py-32">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-2xl mx-auto mb-16 scroll-animate opacity-0">
+            <span class="text-brand-400 text-sm font-semibold tracking-widest uppercase">What We Do</span>
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mt-3 mb-4">
+                Full-Service Creative Agency
+            </h2>
+            <p class="text-gray-400 text-lg">
+                Strategy. Design. Development. We take your project from concept to launch.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+            <!-- Service 1 -->
+            <div class="service-card p-8 rounded-2xl border border-gray-800 bg-gray-900/50 scroll-animate opacity-0">
+                <div class="service-icon w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Brand Identity</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Logos, visual systems, brand guidelines — we craft identities that stand out and resonate with your audience.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="service-card p-8 rounded-2xl border border-gray-800 bg-gray-900/50 scroll-animate opacity-0 animation-delay-100">
+                <div class="service-icon w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Web Development</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Fast, responsive, and modern websites and web apps built with cutting-edge technology.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="service-card p-8 rounded-2xl border border-gray-800 bg-gray-900/50 scroll-animate opacity-0 animation-delay-200">
+                <div class="service-icon w-12 h-12 bg-brand-500/10 rounded-xl flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-bold text-white mb-3">Digital Strategy</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Data-driven marketing strategies, SEO, and growth planning to scale your online presence.
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center mt-12 scroll-animate opacity-0">
+            <a href="/services" class="inline-flex items-center text-brand-400 hover:text-brand-300 font-medium transition-colors">
+                View All Services
+                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="relative py-24 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-600/20 via-brand-500/10 to-transparent"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-3xl mx-auto text-center scroll-animate opacity-0">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">
+                Ready to Build Something Great?
+            </h2>
+            <p class="text-gray-300 text-lg mb-8">
+                Let's talk about your project. No commitment required — just great ideas.
+            </p>
+            <a href="/contact" class="inline-flex items-center px-8 py-3.5 bg-brand-500 hover:bg-brand-400 text-gray-900 font-semibold rounded-lg transition-all hover-lift">
+                Start the Conversation
+                <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

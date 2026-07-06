@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- Page Header -->
+<section class="relative pt-32 pb-20 bg-gray-900/50 overflow-hidden">
+    <div class="absolute top-0 left-0 w-96 h-96 bg-brand-500/5 rounded-full blur-3xl"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+            <span class="text-brand-400 text-sm font-semibold tracking-widest uppercase">Contact</span>
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-white mt-3 mb-6">
+                Let's <span class="gradient-text">Talk</span>
+            </h1>
+            <p class="text-lg text-gray-400 leading-relaxed">
+                Have a project in mind? Fill out the form below or email us directly. 
+                We'll get back to you within 24 hours.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
+            <!-- Form -->
+            <div class="scroll-animate opacity-0">
+                <form action="/contact" method="POST" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-colors"
+                                placeholder="Your name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-colors"
+                                placeholder="you@example.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company</label>
+                        <input type="text" id="company" name="company"
+                            class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-colors"
+                            placeholder="Your company (optional)">
+                    </div>
+                    <div>
+                        <label for="budget" class="block text-sm font-medium text-gray-300 mb-2">Budget Range</label>
+                        <select id="budget" name="budget"
+                            class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white text-sm focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-colors">
+                            <option value="">Select a range (optional)</option>
+                            <option value="<5k">Under $5,000</option>
+                            <option value="5k-15k">$5,000 - $15,000</option>
+                            <option value="15k-50k">$15,000 - $50,000</option>
+                            <option value="50k+">$50,000+</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                            class="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white text-sm placeholder-gray-500 focus:border-brand-500 focus:ring-1 focus:ring-brand-500 outline-none transition-colors resize-y"
+                            placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full sm:w-auto px-8 py-3.5 bg-brand-500 hover:bg-brand-400 text-gray-900 font-semibold rounded-lg transition-all hover-lift flex items-center justify-center gap-2">
+                        Send Message
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                        </svg>
+                    </button>
+                    <p id="form-status" class="text-sm hidden"></p>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="scroll-animate opacity-0 animation-delay-200">
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-6">Get in Touch</h3>
+                        <div class="space-y-5">
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-brand-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-medium">Email</div>
+                                    <a href="mailto:hello@gscreativeagency.com" class="text-gray-400 hover:text-brand-400 text-sm transition-colors">
+                                        hello@gscreativeagency.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 bg-brand-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="text-white text-sm font-medium">Location</div>
+                                    <div class="text-gray-400 text-sm">Calgary, Alberta, Canada</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Response Guarantee -->
+                    <div class="p-6 rounded-2xl border border-gray-800 bg-gray-900/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <svg class="w-5 h-5 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span class="text-white font-semibold text-sm">24-Hour Response Guarantee</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            We respond to every inquiry within one business day. If you don't hear from us, 
+                            feel free to send a follow-up — we're human, things slip through sometimes.
+                        </p>
+                    </div>
+
+                    <!-- Availability Note -->
+                    <div class="p-6 rounded-2xl border border-gray-800 bg-gray-900/50">
+                        <div class="flex items-center gap-3 mb-3">
+                            <svg class="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span class="text-white font-semibold text-sm">Currently Accepting New Projects</span>
+                        </div>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            We have capacity for select projects starting this quarter. 
+                            Early discussions get priority scheduling.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    async function handleFormSubmit(e) {
+        e.preventDefault();
+        const form = e.target;
+        const status = document.getElementById('form-status');
+        const btn = form.querySelector('button[type="submit"]');
+        
+        btn.disabled = true;
+        btn.innerHTML = 'Sending...';
+        status.className = 'text-sm hidden';
+        
+        try {
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            const res = await fetch('/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+            
+            if (res.ok) {
+                status.className = 'text-sm text-green-400 mt-4';
+                status.textContent = 'Thanks! We\'ll be in touch within 24 hours.';
+                form.reset();
+            } else {
+                throw new Error('Failed to send');
+            }
+        } catch (err) {
+            status.className = 'text-sm text-red-400 mt-4';
+            status.textContent = 'Something went wrong. Please email us directly at hello@gscreativeagency.com.';
+        } finally {
+            btn.disabled = false;
+            btn.innerHTML = 'Send Message <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>';
+            status.classList.remove('hidden');
+        }
+    }
+</script>
+
+{% endblock %}
